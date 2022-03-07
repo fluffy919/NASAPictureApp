@@ -13,6 +13,10 @@
 		63D611CD27D27E3A00515E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D611CB27D27E3A00515E6B /* Main.storyboard */; };
 		63D611CF27D27E3B00515E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D611CE27D27E3B00515E6B /* Assets.xcassets */; };
 		63D611D227D27E3B00515E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D611D027D27E3B00515E6B /* LaunchScreen.storyboard */; };
+		63D611DD27D29EDE00515E6B /* NASAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D611DC27D29EDD00515E6B /* NASAModel.swift */; };
+		63D611DF27D2A32900515E6B /* NASAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D611DE27D2A32900515E6B /* NASAViewModel.swift */; };
+		63D611E427D4D60B00515E6B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D611E327D4D60B00515E6B /* APIService.swift */; };
+		63D611E727D55B8D00515E6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D611E627D55B8D00515E6B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		63D611CE27D27E3B00515E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D611D127D27E3B00515E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63D611D327D27E3B00515E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D611DC27D29EDD00515E6B /* NASAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAModel.swift; sourceTree = "<group>"; };
+		63D611DE27D2A32900515E6B /* NASAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewModel.swift; sourceTree = "<group>"; };
+		63D611E327D4D60B00515E6B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		63D611E627D55B8D00515E6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		63D611C427D27E3A00515E6B /* NASAPictureApp */ = {
 			isa = PBXGroup;
 			children = (
+				63D611E527D55B6700515E6B /* Extension */,
+				63D611E227D4D5FD00515E6B /* API */,
+				63D611DB27D2993E00515E6B /* View */,
+				63D611DA27D2993300515E6B /* ViewModel */,
+				63D611D927D2992D00515E6B /* Model */,
 				63D611C527D27E3A00515E6B /* AppDelegate.swift */,
 				63D611C727D27E3A00515E6B /* SceneDelegate.swift */,
-				63D611C927D27E3A00515E6B /* ViewController.swift */,
 				63D611CB27D27E3A00515E6B /* Main.storyboard */,
 				63D611CE27D27E3B00515E6B /* Assets.xcassets */,
 				63D611D027D27E3B00515E6B /* LaunchScreen.storyboard */,
 				63D611D327D27E3B00515E6B /* Info.plist */,
 			);
 			path = NASAPictureApp;
+			sourceTree = "<group>";
+		};
+		63D611D927D2992D00515E6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63D611DC27D29EDD00515E6B /* NASAModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63D611DA27D2993300515E6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63D611DE27D2A32900515E6B /* NASAViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63D611DB27D2993E00515E6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63D611C927D27E3A00515E6B /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63D611E227D4D5FD00515E6B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				63D611E327D4D60B00515E6B /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		63D611E527D55B6700515E6B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63D611E627D55B8D00515E6B /* Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D611CA27D27E3A00515E6B /* ViewController.swift in Sources */,
+				63D611E427D4D60B00515E6B /* APIService.swift in Sources */,
 				63D611C627D27E3A00515E6B /* AppDelegate.swift in Sources */,
+				63D611DD27D29EDE00515E6B /* NASAModel.swift in Sources */,
 				63D611C827D27E3A00515E6B /* SceneDelegate.swift in Sources */,
+				63D611DF27D2A32900515E6B /* NASAViewModel.swift in Sources */,
+				63D611E727D55B8D00515E6B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

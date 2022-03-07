@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NASAPictureApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA Pictures" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-gP-pcl">
+                                <rect key="frame" x="30" y="94" width="354" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9bD-wF-hsG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-Ph-eyt">
+                                <rect key="frame" x="30" y="150" width="354" height="31"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax8-x6-MTQ">
+                                <rect key="frame" x="30" y="193" width="354" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="HI9-j8-FFe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffI-u6-kXF">
+                                <rect key="frame" x="30" y="515" width="354" height="347"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="347" id="l2E-bP-uqI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-Fm-2rn">
+                                <rect key="frame" x="30" y="237" width="354" height="266"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffI-u6-kXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4ew-ya-jcu"/>
+                            <constraint firstItem="l6g-gP-pcl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99F-Qy-n8B"/>
+                            <constraint firstItem="BSf-Fm-2rn" firstAttribute="top" secondItem="Ax8-x6-MTQ" secondAttribute="bottom" constant="12" id="ClT-6A-dRv"/>
+                            <constraint firstItem="Ax8-x6-MTQ" firstAttribute="top" secondItem="NMD-Ph-eyt" secondAttribute="bottom" constant="12" id="I23-eE-1ak"/>
+                            <constraint firstItem="NMD-Ph-eyt" firstAttribute="top" secondItem="l6g-gP-pcl" secondAttribute="bottom" constant="12" id="IbX-AK-Zik"/>
+                            <constraint firstItem="Ax8-x6-MTQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="KBF-WY-TXN"/>
+                            <constraint firstItem="l6g-gP-pcl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="LeX-rI-U9f"/>
+                            <constraint firstItem="l6g-gP-pcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PzN-uh-SjN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ax8-x6-MTQ" secondAttribute="trailing" constant="30" id="fjt-sC-CrT"/>
+                            <constraint firstItem="NMD-Ph-eyt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="huZ-lr-BFB"/>
+                            <constraint firstItem="ffI-u6-kXF" firstAttribute="top" secondItem="BSf-Fm-2rn" secondAttribute="bottom" constant="12" id="kaZ-h7-0ot"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ffI-u6-kXF" secondAttribute="trailing" constant="30" id="nCI-mM-skB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BSf-Fm-2rn" secondAttribute="trailing" constant="30" id="oGz-tu-s81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ffI-u6-kXF" secondAttribute="bottom" id="uN6-Rv-5QD"/>
+                            <constraint firstItem="BSf-Fm-2rn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xjP-Wx-56r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NMD-Ph-eyt" secondAttribute="trailing" constant="30" id="zHX-3Q-xau"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="NMD-Ph-eyt" id="4Cc-wV-zzk"/>
+                        <outlet property="descriptionLabel" destination="ffI-u6-kXF" id="qcQ-mc-ChW"/>
+                        <outlet property="image" destination="BSf-Fm-2rn" id="lP6-NA-lnV"/>
+                        <outlet property="titleLabel" destination="Ax8-x6-MTQ" id="n3H-rc-Xut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="65.625"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
