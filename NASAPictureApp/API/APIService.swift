@@ -25,6 +25,7 @@ class APIService: NSObject {
                 
                 do {
                     let nasaData = try jsonDecoder.decode(Nasa.self, from: data)
+                    print(nasaData.title ?? "Failed to get the title!")
                     completion(nasaData)
                 }
                 catch {
